@@ -5,6 +5,7 @@ coverage/
 # Mac
 .DS_Store
 .vscode/
+.idea
 
 # Node.js
 node_modules
