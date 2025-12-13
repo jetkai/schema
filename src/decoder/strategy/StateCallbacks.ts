@@ -418,7 +418,9 @@ export function getDecoderStateCallbacks<T extends Schema>(decoder: Decoder<T>):
             }, {
                 get(target, prop: string) {
                     if (!target[prop as keyof typeof target]) {
-                        throw new Error(`Can't access '${prop}' through callback proxy. access the instance directly.`);
+                        //throw new Error(`Can't access '${prop}' through callback proxy. access the instance directly.`);
+                        console.error(`Can't access '${prop}' through callback proxy. access the instance directly.`);
+                        return;
                     }
                     return target[prop as keyof typeof target];
                 },

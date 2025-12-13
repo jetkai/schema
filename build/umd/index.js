@@ -5072,7 +5072,9 @@
                 }, {
                     get(target, prop) {
                         if (!target[prop]) {
-                            throw new Error(`Can't access '${prop}' through callback proxy. access the instance directly.`);
+                            //throw new Error(`Can't access '${prop}' through callback proxy. access the instance directly.`);
+                            console.error(`Can't access '${prop}' through callback proxy. access the instance directly.`);
+                            return;
                         }
                         return target[prop];
                     },
